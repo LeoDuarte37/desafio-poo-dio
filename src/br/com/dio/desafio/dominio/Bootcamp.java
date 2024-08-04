@@ -14,6 +14,17 @@ public class Bootcamp {
     private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
+    public void listarConteudos() {
+        System.out.println("\nConteúdos do Bootcamp: " + this.nome);
+        conteudos.stream()
+            .forEach(conteudo -> System.out.println("Nome: " + conteudo.getTitulo()));
+    }
+
+    public void listarDevsInscritos() {
+        System.out.println("\nIncritos no Bootcamp: " + this.nome);
+        devsInscritos.stream()
+            .forEach(dev -> System.out.println("Nome: " + dev.getNome()));
+    }
 
     public String getNome() {
         return nome;
